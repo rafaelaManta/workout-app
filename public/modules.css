@@ -1,0 +1,257 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol,ul,li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    vertical-align: baseline;
+}
+html,body {
+    box-sizing: border-box;
+}
+  
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+  
+body{
+    color:#191919;
+    background-color: #EBEAEA;
+    font-weight: 400;
+    font-family: "aktiv-grotesk-extended",sans-serif;
+}
+h1{
+    font-size: 24px;
+}
+h2{
+    font-size: 20px;
+}
+h3{
+    font-size: 18px;
+}
+h4{
+    font-size: 16px;
+}
+p{
+    font-size: 14px;
+}
+.bold{
+    font-weight: 700;
+}
+.regular{
+    font-weight: 400;
+}
+.light{
+    font-weight: 100;
+}
+.container{
+    max-width: 884px;
+    margin: 0 auto;
+    padding: 0 15px;
+    text-align: center;
+}
+.content{
+    border-radius: 21px;
+    background-color: #EBEAEA;
+    box-shadow: 8px 8px 18px 0 transparent, -8px -8px 18px 0 #FFFFFF;   
+}
+
+.left{
+    padding: 24px;
+    max-width:420px;   
+}
+.right{ 
+   
+    padding: 16px;
+    max-width:440px;
+}  
+.p-37{
+    padding:37px 0;
+}
+.p-15{
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+.d-flex{
+    display: flex;
+}
+.flex-column {
+    flex-direction: column;
+}
+.flex-wrap {
+    flex-wrap: wrap;
+}
+.justify-content-between {
+    justify-content: space-between;
+}
+.align-items-center {
+    align-items: center;
+}
+.success{
+    color:green;
+}
+.error{
+    color:red;
+}
+.svg{
+  
+    border-radius: 50%;
+    background: #EBEAEA;
+    box-shadow: 8px 8px 18px 0 rgba(0,0,0,0.1), -8px -8px 18px 0 #FFFFFF;
+    position: relative;
+}
+.svg div{
+    position: absolute;
+  
+}
+.fade{
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .8s ease-in-out;
+}
+.fade.show{
+    opacity: 1;
+    visibility: visible;
+}
+.workout .drag-element .content,
+body .drag-element .content{
+    
+    border-radius: 10px;
+    padding: 17px 24px 24px 24px;
+}
+
+.workout .drag-element .content.break-container,
+body .drag-element .content.break-container{
+    width: 408px;
+}
+.delete,
+body .drag-element .delete{
+    opacity:0;
+    transition:opacity .8s ease;
+}
+.workout .content:hover .delete,
+body .drag-element .content:hover .delete{
+    opacity:1;
+    cursor:pointer;
+}
+.workout .content .title,
+body .drag-element  .content .title{
+    margin-bottom:18px;
+}
+.workout .content .title h3,
+body .drag-element .content .title h3{
+    margin-left:12px;
+}
+.workout .content  h4,
+body .drag-element .content  h4{
+    opacity: 0.5;
+    margin-left:4px;
+}
+.content .details div,
+body .drag-element .content .details div{
+    width: 84px;
+    height: 64px;
+    opacity:0.9;
+    border-radius:10px;
+    background-color:rgba(255,255,255,0.2);
+    margin-left:8px;
+}
+.content .details p ,
+body .drag-element .content .details p{
+    padding:8px 0;
+    font-size:12px;
+    line-height:16px;
+    opacity:0.4;
+    text-align:center;
+}
+.content .details h2,
+body .drag-element .content .details h2{
+    text-align:center;
+    line-height:16px;
+    opacity:0.8;
+}
+.break,
+body .drag-element .break{
+    padding:24px 0;
+    position:relative;
+    text-align:center;
+    cursor:pointer;
+}
+.break p,
+body .drag-element .break p {
+    display:inline-block;
+    background-color:transparent;
+    opacity:0.4;
+
+}
+.break p:before,
+body .drag-element .break p::before{
+    border-bottom: 3px solid #D8D8D8;
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top:50%;
+    z-index:-1;
+}
+.drag-element.remove .break,
+body .drag-element.remove .break{
+    display: none;
+}
+.drag-element{
+    
+    cursor: move; 
+    cursor: grab;
+    cursor: -moz-grab;
+    cursor: -webkit-grab;
+ }
+    
+.drag-element:active {
+    cursor: grabbing;
+    cursor: -moz-grabbing;
+    cursor: -webkit-grabbing;
+}
+
+@media screen and (min-width:884px){
+    .container{
+        padding: 0;
+        text-align: unset;
+    }
+    .right{
+        margin-left:24px;
+    }
+    .list-container >div{
+        justify-content: unset;
+    }
+    .list-container .card{
+        margin-right:16px;
+    }
+    .search-bar input{
+        width:372px;
+     }
+   
+     .workout-name input{
+        width: 420px;
+     }
+     .content .details,
+     body .drag-element .content .details{
+         flex-wrap: unset;
+    }
+}
+@media screen and (min-width:992px){
+    .container{
+       padding:0;
+    }
+}
